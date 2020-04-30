@@ -1,0 +1,208 @@
+csc343h-dingxuya=> \i runner.txt
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:12: NOTICE:  drop cascades to 22 other objects
+DETAIL:  drop cascades to table host
+drop cascades to table guest
+drop cascades to table property
+drop cascades to table propertyluxury
+drop cascades to table propertyprice
+drop cascades to table cityproperty
+drop cascades to table waterproperty
+drop cascades to table rental
+drop cascades to table rentalguest
+drop cascades to table rentalterm
+drop cascades to table ratingproperty
+drop cascades to table ratinghost
+drop cascades to table propertycomment
+drop cascades to table guestnumcap
+drop cascades to view atcapacityproperty
+drop cascades to table q2
+drop cascades to view notatcapacityproperty
+drop cascades to view atcapacitypropertyavgrating
+drop cascades to view notatcapacitypropertyavgrating
+drop cascades to view atcapacityfinal
+drop cascades to view notatcapacityfinal
+drop cascades to view final
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 3
+INSERT 0 6
+INSERT 0 6
+INSERT 0 14
+INSERT 0 6
+INSERT 0 1
+INSERT 0 1
+INSERT 0 5
+INSERT 0 12
+INSERT 0 5
+INSERT 0 9
+INSERT 0 5
+INSERT 0 3
+INSERT 0 5
+
+-------------------- Query 1: -----------------------------------
+
+psql:q1.sql:3: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:13: NOTICE:  view "propertywithluxury" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+          luxury          | l_count 
+--------------------------+---------
+ concierge service        |       2
+ laundry service          |       2
+ sauna                    |       2
+ daily breakfast delivery |       1
+ daily cleaning           |       3
+ hot tub                  |       4
+(6 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+psql:q2.sql:3: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q2.sql:14: NOTICE:  view "atcapacityproperty" does not exist, skipping
+DROP VIEW
+psql:q2.sql:15: NOTICE:  view "notatcapacityproperty" does not exist, skipping
+DROP VIEW
+psql:q2.sql:16: NOTICE:  view "atcapacitypropertyavgrating" does not exist, skipping
+DROP VIEW
+psql:q2.sql:17: NOTICE:  view "notatcapacitypropertyavgrating" does not exist, skipping
+DROP VIEW
+psql:q2.sql:18: NOTICE:  view "atcapacityfinal" does not exist, skipping
+DROP VIEW
+psql:q2.sql:19: NOTICE:  view "notatcapacityfinal" does not exist, skipping
+DROP VIEW
+psql:q2.sql:20: NOTICE:  view "final" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ at_capacity |       avg        | num_rental 
+-------------+------------------+------------
+ f           | 1.66666666666667 |          2
+ t           | 3.83333333333333 |          3
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+psql:q3.sql:3: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q3.sql:14: NOTICE:  view "hostaveragerating" does not exist, skipping
+DROP VIEW
+psql:q3.sql:15: NOTICE:  view "highestavg" does not exist, skipping
+DROP VIEW
+psql:q3.sql:16: NOTICE:  view "hosthighestavg" does not exist, skipping
+DROP VIEW
+psql:q3.sql:17: NOTICE:  view "propertyrentinginfo" does not exist, skipping
+DROP VIEW
+psql:q3.sql:18: NOTICE:  view "hostrentinghighestprice" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+     email     |    avg_rating    | highest_price 
+---------------+------------------+---------------
+ han@gmail.com | 4.33333333333333 |          1220
+(1 row)
+
+
+-------------------- Query 4: -----------------------------------
+
+psql:q4.sql:3: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:14: NOTICE:  view "extraguests" does not exist, skipping
+DROP VIEW
+psql:q4.sql:15: NOTICE:  view "extraguestsproperty" does not exist, skipping
+DROP VIEW
+psql:q4.sql:16: NOTICE:  view "extraguestswaterproperty" does not exist, skipping
+DROP VIEW
+psql:q4.sql:17: NOTICE:  view "extraguestscityproperty" does not exist, skipping
+DROP VIEW
+psql:q4.sql:18: NOTICE:  view "extraguestsotherproperty" does not exist, skipping
+DROP VIEW
+psql:q4.sql:19: NOTICE:  view "watertypecount" does not exist, skipping
+DROP VIEW
+psql:q4.sql:20: NOTICE:  view "watertypeaverage" does not exist, skipping
+DROP VIEW
+psql:q4.sql:21: NOTICE:  view "citytypecount" does not exist, skipping
+DROP VIEW
+psql:q4.sql:22: NOTICE:  view "citytypeaverage" does not exist, skipping
+DROP VIEW
+psql:q4.sql:23: NOTICE:  view "othertypecount" does not exist, skipping
+DROP VIEW
+psql:q4.sql:24: NOTICE:  view "othertypeaverage" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+      city_avg      |       water_avg        |     other_avg      
+--------------------+------------------------+--------------------
+ 2.0000000000000000 | 1.00000000000000000000 | 1.5000000000000000
+(1 row)
+
+
+-------------------- Query 5: -----------------------------------
+
+psql:q5.sql:3: NOTICE:  table "q5" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q5.sql:16: NOTICE:  drop cascades to view hostrentinghighestprice
+DROP VIEW
+psql:q5.sql:17: NOTICE:  view "propertyrentingpriceanalysis" does not exist, skipping
+DROP VIEW
+psql:q5.sql:18: NOTICE:  view "highestrange" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ p_id | highest | lowest | range | star 
+------+---------+--------+-------+------
+    2 |     600 |    580 |    20 | 
+    3 |     750 |    750 |     0 | 
+    5 |    1220 |   1000 |   220 | *
+(3 rows)
+
+
